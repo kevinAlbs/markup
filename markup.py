@@ -439,7 +439,7 @@ in_json_str = """
 """
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--version", action="store_true", help="Print version of crypt shared library")
     parser.add_argument("--libpath", help="Path to the crypt shared library. May also be set through CRYPT_SHARED_PATH environment variable")
     parser.add_argument("--inpath", help="Path to a file containing the command to mark up. The format must be extended canonical JSON. If not present, input is read from stdin.")
