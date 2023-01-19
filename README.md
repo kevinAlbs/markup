@@ -1,9 +1,14 @@
 A utility for testing the [Automatic Encryption Shared Library](https://www.mongodb.com/docs/manual/core/queryable-encryption/reference/shared-library/).
 
-Example:
+Examples:
+
 ```
-$ export CRYPT_SHARED_PATH=/home/kevin/bin/mongo_crypt_shared_v1-linux-x86_64-enterprise-ubuntu1804-6.0/lib/mongo_crypt_v1.so
-$ cat example-input.json | python markup.py
+$ python markup.py --version --libpath ~/bin/crypt_shared-6.0.0/lib/mongo_crypt_v1.dylib 
+mongo_crypt_v1-dev-6.0.0
+```
+
+```
+$ cat example-input.json | python markup.py --libpath ~/bin/crypt_shared-6.0.0/lib/mongo_crypt_v1.dylib 
 {
     "hasEncryptionPlaceholders": true,
     "schemaRequiresEncryption": true,
